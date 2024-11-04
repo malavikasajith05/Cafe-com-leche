@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./Roboto/LICENSE.txt);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #1f2937;
+    position: fixed;
+    z-index: 1000; /* Keep the header on top */
+}
+
+header picture img {
+    width: 70px; 
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Product Section */
+.product-section {
+    margin-top: 100px; /* Space to avoid header overlap */
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.product-section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.product-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px; /* Added for rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.product-list li figure {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0;
+}
+
+.product-list li img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #2563eb; /* Blue border around each product */
+    border-radius: 10px;
+}
+
+.product-list li figcaption {
+    flex: 1;
+}
+
+.product-list li h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.product-list li p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-list li .price {
+    font-weight: bold;
+    color: #2563eb; /* Highlighted price color */
+    margin-top: 0.5rem;
+}
+
+/* Call to Action Section */
+.action {
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    width: 80%;
+    max-width: 800px;
+    background-color: #3882f6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: start;
+}
+
+.call-to-action h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.call-to-action h5 {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.5rem;
+    color: #e5e7eb;
+}
+
+.sign-up button {
+    background-color: rgb(0, 119, 255);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up button:hover {
+    background-color: rgb(0, 99, 214);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f2937;
+    color: #fff;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; /* Stack navigation links */
+        align-items: center; /* Center align */
+    }
+
+    .product-list {
+        flex-direction: column; /* Stack product items */
+    }
+
+    .product-list li {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center align */
+    }
+
+    .product-list li figure {
+        flex-direction: column; /* Stack image and caption */
+        align-items: center; /* Center align */
+    }
+
+    .product-list li img {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 200px; /* Limit width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .action {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    .sign-up button {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        font-size: 16px; /* Adjust font size for small screens */
+    }
+
+    .call-to-action h5 {
+        font-size: 0.5rem; /* Adjust font size */
+    }
+}
